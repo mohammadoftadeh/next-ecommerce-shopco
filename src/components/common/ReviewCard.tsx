@@ -24,7 +24,7 @@ const ReviewCard = ({
   return (
     <div
       className={cn([
-        "relative flex flex-col items-start aspect-auto border border-black/10 rounded-[20px] p-6 sm:px-8 sm:py-7 overflow-hidden",
+        "relative bg-white flex flex-col items-start aspect-auto border border-black/10 rounded-[20px] p-6 sm:px-8 sm:py-7 overflow-hidden",
         className,
       ])}
     >
