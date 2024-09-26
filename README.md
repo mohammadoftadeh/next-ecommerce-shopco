@@ -1,4 +1,4 @@
-[![Shopco Screenshot](https://github.com/mohammadoftadeh/repo-assets/blob/main/shopco-cover.png?raw=true)](https://your-demo-link.com)
+[![Shopco Screenshot](https://github.com/mohammadoftadeh/repo-assets/blob/main/shopco-cover.png?raw=true)](https://next-ecommerce-shopco.vercel.app/)
 
 # Shopco
 
@@ -26,9 +26,9 @@ Shopco bridges the gap between design and development by converting Figma design
 
 ## Demo
 
-Check out the live demo: [Shopco Demo](https://your-demo-link.com)
+Check out the live demo: [Shopco Demo](https://next-ecommerce-shopco.vercel.app/)
 
-<!-- [![Shopco Screenshot](https://github.com/mohammadoftadeh/repo-assets/blob/main/shopco-cover.png?raw=true)](https://your-demo-link.com) -->
+<!-- [![Shopco Screenshot](https://github.com/mohammadoftadeh/repo-assets/blob/main/shopco-cover.png?raw=true)](https://next-ecommerce-shopco.vercel.app/) -->
 
 ## Features
 
