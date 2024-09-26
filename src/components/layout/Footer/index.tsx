@@ -35,7 +35,7 @@ const socialsData: SocialNetworks[] = [
 const paymentBadgesData: PaymentBadge[] = [
   {
     id: 1,
-    srcUrl: "/icons/visa.svg",
+    srcUrl: "/icons/Visa.svg",
   },
   {
     id: 2,
