@@ -1,0 +1,11 @@
+.Loader {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l2 1s infinite linear;
+  display: inline-block;
+}
+@keyframes l2 {
+  to {
+    transform: rotate(1turn);
+  }
+}
