@@ -1,4 +1,4 @@
-[![Shopco Screenshot](https://github.com/mohammadoftadeh/repo-assets/blob/main/shopco-cover.png?raw=true)](https://next-ecommerce-shopco.vercel.app/)
+[![Shopco Screenshot](https://github.com/user-attachments/assets/1760cf21-bbf4-4dec-b9a5-bbfdbd2d7609)
 
 # Shopco
 
