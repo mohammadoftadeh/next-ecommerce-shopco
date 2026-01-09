@@ -117,10 +117,12 @@ const TopNavbar = () => {
             name="search"
             placeholder="Search for products..."
             className="bg-transparent placeholder:text-black/40"
+            aria-label="Search for products"
+            maxLength={100}
           />
         </InputGroup>
         <div className="flex items-center">
-          <Link href="/search" className="block md:hidden mr-[14px] p-1">
+          <Link href="/search" className="block md:hidden mr-[14px] p-1" aria-label="Search">
             <Image
               priority
               src="/icons/search-black.svg"
@@ -131,7 +133,7 @@ const TopNavbar = () => {
             />
           </Link>
           <CartBtn />
-          <Link href="/#signin" className="p-1">
+          <Link href="/#signin" className="p-1" aria-label="Sign in">
             <Image
               priority
               src="/icons/user.svg"

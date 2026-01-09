@@ -88,36 +88,25 @@ const Reviews = ({ data }: ReviewsProps) => {
                 <ReviewCard
                   className="h-full"
                   data={review}
-                  blurChild={
-                    data.length >= 6 && (
-                      <div
-                        className={cn([
-                          isDesktop
-                            ? (current + 1 === count
-                                ? 0
-                                : current + 1 > count
-                                ? 1
-                                : current + 1) === index &&
-                              "backdrop-blur-[2px]"
-                            : (current === count ? 0 : current) === index &&
-                              "backdrop-blur-[2px]",
-                          isDesktop
-                            ? (current === 1
-                                ? count - 2
-                                : current === 2
-                                ? count - 1
-                                : current - 3) === index &&
-                              "backdrop-blur-[2px]"
-                            : (current === 1
-                                ? count - 1
-                                : current === 2
-                                ? 0
-                                : current - 2) === index &&
-                              "backdrop-blur-[2px]",
-                          "absolute bg-white/10 right-0 top-0 h-full w-full z-10",
-                        ])}
-                      />
-                    )
+                  blurEffect={data.length >= 6}
+                  isBlurred={
+                    isDesktop
+                      ? (current + 1 === count
+                          ? 0
+                          : current + 1 > count
+                          ? 1
+                          : current + 1) === index ||
+                        (current === 1
+                          ? count - 2
+                          : current === 2
+                          ? count - 1
+                          : current - 3) === index
+                      : (current === count ? 0 : current) === index ||
+                        (current === 1
+                          ? count - 1
+                          : current === 2
+                          ? 0
+                          : current - 2) === index
                   }
                 />
               </CarouselItem>

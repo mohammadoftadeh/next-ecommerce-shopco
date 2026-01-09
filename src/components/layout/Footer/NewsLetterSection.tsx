@@ -34,6 +34,7 @@ const NewsLetterSection = () => {
               name="email"
               placeholder="Enter your email address"
               className="bg-transparent placeholder:text-black/40 placeholder:text-sm sm:placeholder:text-base"
+              maxLength={255}
             />
           </InputGroup>
           <Button

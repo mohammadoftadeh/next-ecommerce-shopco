@@ -52,6 +52,7 @@ const CartCounter = ({
         type="button"
         className="h-5 w-5 sm:h-6 sm:w-6 text-xl hover:bg-transparent"
         onClick={() => remove()}
+        aria-label="Decrease quantity"
       >
         <FaMinus />
       </Button>
@@ -64,6 +65,7 @@ const CartCounter = ({
         type="button"
         className="h-5 w-5 sm:h-6 sm:w-6 text-xl hover:bg-transparent"
         onClick={() => addToCart()}
+        aria-label="Increase quantity"
       >
         <FaPlus />
       </Button>

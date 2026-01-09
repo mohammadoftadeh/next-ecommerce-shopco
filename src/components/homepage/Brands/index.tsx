@@ -31,7 +31,6 @@ const Brands = () => {
         {brandsData.map((brand) => (
           <Image
             key={brand.id}
-            priority
             src={brand.srcUrl}
             height={0}
             width={0}

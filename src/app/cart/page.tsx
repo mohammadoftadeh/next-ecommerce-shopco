@@ -89,6 +89,7 @@ export default function CartPage() {
                       name="code"
                       placeholder="Add promo code"
                       className="bg-transparent placeholder:text-black/40"
+                      maxLength={20}
                     />
                   </InputGroup>
                   <Button

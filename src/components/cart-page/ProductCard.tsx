@@ -33,7 +33,6 @@ const ProductCard = ({ data }: ProductCardProps) => {
           height={124}
           className="rounded-md w-full h-full object-cover hover:scale-110 transition-all duration-500"
           alt={data.name}
-          priority
         />
       </Link>
       <div className="flex w-full self-stretch flex-col">
@@ -48,6 +47,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
             variant="ghost"
             size="icon"
             className="h-5 w-5 md:h-9 md:w-9"
+            aria-label={`Remove ${data.name} from cart`}
             onClick={() =>
               dispatch(
                 remove({
@@ -57,6 +57,7 @@ const ProductCard = ({ data }: ProductCardProps) => {
                 })
               )
             }
+            aria-label={`Remove ${data.name}`}
           >
             <PiTrashFill className="text-xl md:text-2xl text-red-600" />
           </Button>

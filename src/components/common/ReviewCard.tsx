@@ -7,7 +7,8 @@ import { Review } from "@/types/review.types";
 import { cn } from "@/lib/utils";
 
 type ReviewCardProps = {
-  blurChild?: React.ReactNode;
+  blurEffect?: boolean;
+  isBlurred?: boolean;
   isAction?: boolean;
   isDate?: boolean;
   data: Review;
@@ -15,7 +16,8 @@ type ReviewCardProps = {
 };
 
 const ReviewCard = ({
-  blurChild,
+  blurEffect = false,
+  isBlurred = false,
   isAction = false,
   isDate = false,
   data,
@@ -28,7 +30,18 @@ const ReviewCard = ({
         className,
       ])}
     >
-      {blurChild && blurChild}
+      {/*
+        Optimization: We pass boolean flags for blur effects instead of JSX elements
+        to maintain referential equality in props, allowing React.memo to prevent unnecessary re-renders.
+      */}
+      {blurEffect && (
+        <div
+          className={cn([
+            isBlurred && "backdrop-blur-[2px]",
+            "absolute bg-white/10 right-0 top-0 h-full w-full z-10",
+          ])}
+        />
+      )}
       <div className="w-full flex items-center justify-between mb-3 sm:mb-4">
         <Rating
           initialValue={data.rating}
@@ -57,4 +70,6 @@ const ReviewCard = ({
   );
 };
 
-export default ReviewCard;
+// Memoized to prevent re-renders when parent re-renders (e.g. carousel scroll)
+// if the props (data, blur status) haven't changed.
+export default React.memo(ReviewCard);
